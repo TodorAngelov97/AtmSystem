@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e5adaa7-5aff-4c58-98d1-8ad2ef3f9b58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/AtmSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/AtmSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Account.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/AtmSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+            <state relative-caret-position="468">
+              <caret line="37" column="65" lean-forward="true" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#267#268#0" expanded="true" />
@@ -83,14 +80,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="24" column="117" selection-start-line="24" selection-start-column="117" selection-end-line="24" selection-end-column="117" />
               <folding>
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
+                <element signature="e#836#837#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,7 +133,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/talentboostAtmSystem.java" />
-        <option value="$PROJECT_DIR$/src/com/Account.java" />
         <option value="$PROJECT_DIR$/src/com/com/exception/InvalidAccountNumber.java" />
         <option value="$PROJECT_DIR$/src/com/com/exception/InvalidAccountNumberException.java" />
         <option value="$PROJECT_DIR$/src/com/com/exception/InvalidUserID.java" />
@@ -144,6 +140,7 @@
         <option value="$PROJECT_DIR$/src/com/com/exception/UserAlreadyExistsException.java" />
         <option value="$PROJECT_DIR$/src/com/User.java" />
         <option value="$PROJECT_DIR$/src/com/AtmSystem.java" />
+        <option value="$PROJECT_DIR$/src/com/Account.java" />
       </list>
     </option>
   </component>
@@ -190,7 +187,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552559039020" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552560435991" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -367,17 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/com/exception/InvalidAccountNumberException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -407,14 +393,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/AtmSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="468">
+          <caret line="37" column="65" lean-forward="true" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#267#268#0" expanded="true" />
             <element signature="e#306#307#0" expanded="true" />
             <element signature="e#2353#2354#0" expanded="true" />
             <element signature="e#2401#2402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="117" selection-start-line="24" selection-start-column="117" selection-end-line="24" selection-end-column="117" />
+          <folding>
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
           </folding>
         </state>
       </provider>
