@@ -1,5 +1,7 @@
 package com;
 
+import com.com.exception.InvalidAccountNumberException;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,9 +18,9 @@ public class User {
 
     public Account getAccount(int accountNumber) {
         if (accounts.containsKey(accountNumber)) {
-            return accounts.get(accountNumber);
+            throw new InvalidAccountNumberException("");
         }
-        return null;
+        return accounts.get(accountNumber);
     }
 
     public void addAccount(Account account) {

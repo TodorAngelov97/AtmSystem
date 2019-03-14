@@ -1,5 +1,10 @@
 package com;
 
+import com.com.exception.AccountAlreadyExistsException;
+import com.com.exception.InvalidAccountNumberException;
+import com.com.exception.InvalidUserIDException;
+import com.com.exception.UserAlreadyExistsException;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,8 +55,7 @@ public class AtmSystem {
 
     private boolean isAccountNumberCorrect(User user, int accountNumber) {
         if (user.getAccount(accountNumber) == null) {
-            System.out.println("Incorrect account number");
-            return false;
+            throw new InvalidAccountNumberException("Incorrect account number");
         }
         return true;
     }
@@ -70,8 +74,7 @@ public class AtmSystem {
 
     private boolean checkUserIsNull(int userID, int pin) {
         if (getUser(userID, pin) == null) {
-            System.out.println("Incorrect password");
-            return true;
+            throw new InvalidUserIDException("Incorrect userID");
         }
         return false;
     }
@@ -89,12 +92,11 @@ public class AtmSystem {
 
     public void createUser(int userId, int pin) {
         //verification for existing userID
-        if (!isUserExists(userId)) {
-            users.put(userId, new User(userId, pin));
-            System.out.println("Successfully created user");
-        } else {
-            System.out.println("User already exists");
+        if (isUserExists(userId)) {
+            throw new UserAlreadyExistsException("User already exist");
         }
+        users.put(userId, new User(userId, pin));
+        System.out.println("Successfully created user");
     }
 
     private boolean isAccountExists(int userId, int pin, int accountNumber) {
@@ -102,12 +104,12 @@ public class AtmSystem {
     }
 
     public void createAccount(int userId, int pin, int accountNumber) {
-        if (!isAccountExists(userId, pin, accountNumber)) {
-            users.get(userId).addAccount(new Account(accountNumber));
-            System.out.println("Successfully created user");
-        } else {
-            System.out.println("Account already exists");
+        if (isAccountExists(userId, pin, accountNumber)) {
+            throw new AccountAlreadyExistsException("Account already exists, userId has to be unique");
         }
+        users.get(userId).addAccount(new Account(accountNumber));
+        System.out.println("Successfully created user");
+
     }
 
     public static void main(String[] args) {
