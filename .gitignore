@@ -4,3 +4,4 @@ my_local_setup.conf
 *.project
 *.iml
 *.idea
+/out
