@@ -17,7 +17,7 @@ public class User {
     }
 
     public Account getAccount(int accountNumber) {
-        if (accounts.containsKey(accountNumber)) {
+        if (!accounts.containsKey(accountNumber)) {
             throw new InvalidAccountNumberException("");
         }
         return accounts.get(accountNumber);

@@ -14,10 +14,13 @@ public class AtmSystem {
     //Map<Integer,User> -->HashMap key ID
     //Set<User> >
     private Map<Integer, User> users;
+    private int numberOfAccounts;
+    private final int INITIAL_ACOCOUNT_NUMBER = -1;
 
 
     public AtmSystem() {
         users = new HashMap<>();
+        numberOfAccounts = INITIAL_ACOCOUNT_NUMBER;
     }
 
     private boolean validateInput(int userId, int pin, int accountNumber) {
@@ -60,9 +63,8 @@ public class AtmSystem {
         return true;
     }
 
-
     private User getUser(int userId, int pin) {
-        if (users.containsKey(userId)) {
+        if (isUserExists(userId)) {
             User user = users.get(userId);
             if (isCorrectUsersPin(user, pin)) {
                 return user;
@@ -103,25 +105,60 @@ public class AtmSystem {
         return getUser(userId, pin).isAccountExists(accountNumber);
     }
 
-    public void createAccount(int userId, int pin, int accountNumber) {
-        if (isAccountExists(userId, pin, accountNumber)) {
+    public int createAccount(int userId, int pin) {
+        ++numberOfAccounts;
+        if (isAccountExists(userId, pin, numberOfAccounts)) {
             throw new AccountAlreadyExistsException("Account already exists, userId has to be unique");
         }
-        users.get(userId).addAccount(new Account(accountNumber));
+        users.get(userId).addAccount(new Account(numberOfAccounts));
         System.out.println("Successfully created user");
-
+        return numberOfAccounts;
     }
 
-    public static void main(String[] args) {
-        AtmSystem atm = new AtmSystem();
-        atm.createUser(12, 1245);
-        atm.createAccount(12, 1245, 1);
-        atm.checkBalance(12, 1245, 1);
-        atm.depositToAccount(12, 1245, 1, 12);
-        atm.checkBalance(12, 1245, 1);
-        atm.withdrawFromAccount(12, 1245, 1, 10);
-        atm.checkBalance(12, 1245, 1);
+    public int createOverdraftAccount(int userId, int pin, int overdraft) {
+        ++numberOfAccounts;
+        if (isAccountExists(userId, pin, numberOfAccounts)) {
+            throw new AccountAlreadyExistsException("Account already exists, userId has to be unique");
+        }
+        users.get(userId).addAccount(new OverdraftAccount(numberOfAccounts, overdraft));
+        System.out.println("Successfully created user");
+        return numberOfAccounts;
+    }
 
+    public int createRestrictionWithdrawAccount(int userId, int pin, int restriction) {
+        ++numberOfAccounts;
+        if (isAccountExists(userId, pin, numberOfAccounts)) {
+            throw new AccountAlreadyExistsException("Account already exists, userId has to be unique");
+        }
+        users.get(userId).addAccount(new RestrictionWithdrawAccount(numberOfAccounts, restriction));
+        System.out.println("Successfully created user");
+        return numberOfAccounts;
+    }
+
+    public void joinToYourAccount(int userId, int pin, int joinedUserId, int accountNumber) {
+
+        User user = getUser(userId, pin);
+        Account acountToJoin = user.getAccount(accountNumber);
+        if (isUserExists(userId)) {
+            User userToJoin = users.get(joinedUserId);
+            userToJoin.addAccount(acountToJoin);
+        }
+    }
+
+
+    public static void main(String[] args) {
+//        AtmSystem atm = new AtmSystem();
+//        atm.createUser(12, 1245);
+//        atm.createAccount(12, 1245);
+//        atm.checkBalance(12, 1245, 1);
+//        atm.depositToAccount(12, 1245, 1, 12);
+//        atm.checkBalance(12, 1245, 1);
+//        atm.withdrawFromAccount(12, 1245, 1, 10);
+//        atm.checkBalance(12, 1245, 1);
+//        atm.createOverdraftAccount(12, 1245, 100);
+//        // atm.withdrawFromAccount(12, 1245, 34, 110);
+//        atm.createRestrictionWithdrawAccount(12, 1245, 110);
+//        //  atm.withdrawFromAccount(12, 1245, 35, 120);
     }
 
 

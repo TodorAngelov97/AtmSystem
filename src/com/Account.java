@@ -2,7 +2,7 @@ package com;
 
 public class Account {
 
-    private int balance;
+    protected int balance;
     private int accountNumber;
 
 
@@ -21,11 +21,15 @@ public class Account {
     }
 
     public int withdraw(int amount) {
-        if (balance - amount < 0) {
+        if (isBalancePositivAfterWithdraw(amount)) {
             throw new IllegalArgumentException("Illegal argument, balance should be positive after withdraw operation");
         }
         balance -= amount;
         return balance;
+    }
+
+    private boolean isBalancePositivAfterWithdraw(int amount) {
+        return balance - amount < 0;
     }
 
     public int checkBalance() {
