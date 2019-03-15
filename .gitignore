@@ -3,4 +3,4 @@ my_local_setup.conf
 *.bin
 *.project
 *.iml
-
+*.idea
