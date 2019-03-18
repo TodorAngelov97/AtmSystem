@@ -3,6 +3,8 @@ package com;
 public class OverdraftAccount extends Account {
 
     private int overdraft;
+    private static final int MINUS = -1;
+
 
     public OverdraftAccount(int accountNumber, int overdraft) {
         super(accountNumber);
@@ -19,7 +21,7 @@ public class OverdraftAccount extends Account {
     }
 
     private boolean isBalanceInRestrictionAfterWithdraw(int amount) {
-        return balance - amount > overdraft;
+        return balance - amount > MINUS * overdraft;
     }
 
 
