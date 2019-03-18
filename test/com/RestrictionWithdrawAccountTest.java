@@ -13,7 +13,7 @@ public class RestrictionWithdrawAccountTest {
     private static final int CORRECT_WITHDRAW_AMOUNT = 80;
     private static final int INCORRECT_WITHDRAW_AMOUNT = 110;
     private static final int DEPOSIT_AMOUNT = 200;
-    private static final int BALACE = 120;
+    private static final int BALANCE = 120;
 
     private RestrictionWithdrawAccount restrictionWithdrawAccount;
 
@@ -26,7 +26,7 @@ public class RestrictionWithdrawAccountTest {
     @Test
     public void testWithdrawWithCorrectData() {
         restrictionWithdrawAccount.withdraw(CORRECT_WITHDRAW_AMOUNT);
-        assertEquals(BALACE, restrictionWithdrawAccount.checkBalance());
+        assertEquals(BALANCE, restrictionWithdrawAccount.checkBalance());
     }
 
     @Test(expected = AmountNotInRestrictionException.class)
