@@ -15,14 +15,15 @@ public class RestrictionWithdrawAccount extends Account {
 
     //new exception
     public int withdraw(int amount) {
-        if (!isAmountInTheRestriction(amount)) {
+        if (!isBalancePositiveAfterWithdraw(amount)) {
             throw new AmountNotInRestrictionException("Amount not in restriction");
         }
         super.withdraw(amount);
         return balance;
     }
 
-    private boolean isAmountInTheRestriction(int amount) {
+    @Override
+    protected boolean isBalancePositiveAfterWithdraw(int amount) {
         return amount <= limitForWithdraw;
     }
 

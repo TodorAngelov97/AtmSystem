@@ -13,14 +13,14 @@ public class OverdraftAccount extends Account {
 
     @Override
     public int withdraw(int amount) {
-        if (!isBalanceInRestrictionAfterWithdraw(amount)) {
+        if (!isBalancePositiveAfterWithdraw(amount)) {
             throw new IllegalArgumentException("Illegal argument, balance should be greater than overdraft after withdraw operation");
         }
         balance -= amount;
         return balance;
     }
 
-    private boolean isBalanceInRestrictionAfterWithdraw(int amount) {
+    protected boolean isBalancePositiveAfterWithdraw(int amount) {
         return balance - amount > MINUS * overdraft;
     }
 

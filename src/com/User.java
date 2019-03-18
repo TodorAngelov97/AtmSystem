@@ -5,14 +5,14 @@ import com.com.exception.InvalidAccountNumberException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class User {
+public class User implements UserInterface {
     private int pin;
-    private int userID;
+    private int userId;
     private Map<Integer, Account> accounts;
 
-    public User(int userID, int pin) {
+    public User(int userId, int pin) {
         this.pin = pin;
-        this.userID = userID;
+        this.userId = userId;
         accounts = new HashMap<>();
     }
 

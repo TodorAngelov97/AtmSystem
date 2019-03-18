@@ -10,9 +10,6 @@ public class AccountTest {
     private static final int ACCOUNT_NUMBER = 1;
     private static final int CORRECT_AMOUNT_FOR_DEPOSIT = 50;
     private static final int CORRECT_AMOUNT_FOR_WITHDRAW = 30;
-    private static final int EXPECTED_BALANCE = 20;
-    private static final int DEFAULT_BALANCE = 0;
-    private static final int INCORRECT_AMOUNT_FOR_DEPOSIT = -1;
 
     private Account account;
 
@@ -30,12 +27,14 @@ public class AccountTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testDepositToThrowException() {
+        final int INCORRECT_AMOUNT_FOR_DEPOSIT = -1;
         account.deposit(INCORRECT_AMOUNT_FOR_DEPOSIT);
     }
 
 
     @Test
     public void testWithdrawWithCorrectData() {
+        final int EXPECTED_BALANCE = 20;
         account.deposit(CORRECT_AMOUNT_FOR_DEPOSIT);
         account.withdraw(CORRECT_AMOUNT_FOR_WITHDRAW);
         assertEquals(EXPECTED_BALANCE, account.checkBalance());
@@ -49,6 +48,7 @@ public class AccountTest {
 
     @Test
     public void testCheckBalanceByDefault() {
+        final int DEFAULT_BALANCE = 0;
         assertEquals(DEFAULT_BALANCE, account.checkBalance());
     }
 
