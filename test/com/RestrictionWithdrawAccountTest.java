@@ -19,7 +19,7 @@ public class RestrictionWithdrawAccountTest {
 
     @Before
     public void setUp() {
-        restrictionWithdrawAccount = new RestrictionWithdrawAccount(1, 100);
+        restrictionWithdrawAccount = new RestrictionWithdrawAccount(ACCOUNT_NUMBER, LIMIT_FOR_WITHDRAW);
         restrictionWithdrawAccount.deposit(DEPOSIT_AMOUNT);
     }
 
