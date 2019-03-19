@@ -20,31 +20,23 @@ public class AtmSystem implements AtmSystemInterface {
     }
 
 
+    //these three methods could be do shorter
     public void depositToAccount(int userId, int pin, int accountNumber, int amount) {
 
-        if (validateInput(userId, pin, accountNumber)) {
-            User user = getUser(userId, pin);
-            Account account = user.getAccount(accountNumber);
-            account.deposit(amount);
-        }
+        Account account = getAccountFromUser(userId, pin, accountNumber);
+        account.deposit(amount);
     }
 
     public void withdrawFromAccount(int userId, int pin, int accountNumber, int amount) {
 
-        if (validateInput(userId, pin, accountNumber)) {
-            User user = getUser(userId, pin);
-            Account account = user.getAccount(accountNumber);
-            account.withdraw(amount);
-        }
+        Account account = getAccountFromUser(userId, pin, accountNumber);
+        account.withdraw(amount);
     }
 
     public void checkBalance(int userId, int pin, int accountNumber) {
 
-        if (validateInput(userId, pin, accountNumber)) {
-            User user = getUser(userId, pin);
-            Account account = user.getAccount(accountNumber);
-            System.out.println(account.checkBalance());
-        }
+        Account account = getAccountFromUser(userId, pin, accountNumber);
+        System.out.println(account.checkBalance());
     }
 
 
@@ -72,7 +64,8 @@ public class AtmSystem implements AtmSystemInterface {
             throw new AccountAlreadyExistsException("Account already exists, userId has to be unique");
         }
         User user = users.get(userId);
-        user.addAccount(new Account(numberOfAccounts));
+        Account newAccount = new Account(numberOfAccounts);
+        user.addAccount(newAccount);
         System.out.println("Successfully created user");
         return numberOfAccounts;
     }
@@ -84,7 +77,8 @@ public class AtmSystem implements AtmSystemInterface {
             throw new AccountAlreadyExistsException("Account already exists, userId has to be unique");
         }
         User user = users.get(userId);
-        user.addAccount(new OverdraftAccount(numberOfAccounts, overdraft));
+        Account newAccount = new OverdraftAccount(numberOfAccounts, overdraft);
+        user.addAccount(newAccount);
         System.out.println("Successfully created user");
         return numberOfAccounts;
     }
@@ -96,21 +90,25 @@ public class AtmSystem implements AtmSystemInterface {
             throw new AccountAlreadyExistsException("Account already exists, userId has to be unique");
         }
         User user = users.get(userId);
-        user.addAccount(new RestrictionWithdrawAccount(numberOfAccounts, restriction));
+        Account newAccount = new RestrictionWithdrawAccount(numberOfAccounts, restriction);
+        user.addAccount(newAccount);
         System.out.println("Successfully created user");
         return numberOfAccounts;
     }
 
     public void joinToYourAccount(int userId, int pin, int joinedUserId, int accountNumber) {
 
-        User user = getUser(userId, pin);
-        Account accountToJoin = user.getAccount(accountNumber);
-        if (isUserExists(userId)) {
-            User userToJoin = users.get(joinedUserId);
-            userToJoin.addAccount(accountToJoin);
-        }
+        Account accountToJoin = getAccountFromUser(userId, pin, accountNumber);
+        User userToJoin = users.get(joinedUserId);
+        userToJoin.addAccount(accountToJoin);
     }
 
+
+    private Account getAccountFromUser(int userId, int pin, int accountNumber) {
+        User user = getUser(userId, pin);
+        Account account = user.getAccount(accountNumber);
+        return account;
+    }
 
     private boolean validateInput(int userId, int pin, int accountNumber) {
 
@@ -126,8 +124,6 @@ public class AtmSystem implements AtmSystemInterface {
         return true;
     }
 
-
-    // can i do it better
     private User getUser(int userId, int pin) {
 
         if (isUserExists(userId)) {
@@ -138,7 +134,6 @@ public class AtmSystem implements AtmSystemInterface {
         }
         throw new InvalidUserIDException("Invalid user id exception");
     }
-
 
     private boolean isCorrectUsersPin(User user, int pin) {
 
@@ -151,7 +146,6 @@ public class AtmSystem implements AtmSystemInterface {
     private boolean isUserExists(int userID) {
         return users.containsKey(userID);
     }
-
 
     private boolean isAccountExists(int userId, int pin, int accountNumber) {
 
