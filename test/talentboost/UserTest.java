@@ -14,6 +14,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserTest {
+
     private static final int ACCOUNT_NUMBER = 1;
     private User user;
 
@@ -25,7 +26,6 @@ public class UserTest {
 
         final int USER_ID = 1;
         final int PIN = 1234;
-
         user = new User(USER_ID, PIN);
     }
 

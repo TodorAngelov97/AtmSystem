@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.assertEquals;
@@ -25,16 +24,28 @@ public class AtmSystemTest {
     @Mock
     private Account account;
 
+    @Mock
+    private User user;
+
     @Before
     public void setUp() {
+
         atmSystem = new AtmSystem(userManager);
+        when(userManager.getUser(MOCKED_USER_ID)).thenReturn(user);
+    }
+
+
+    private void setBehaviour() {
+
+        when(userManager.getAccount(user, MOCKED_ACCOUNT_NUMBER)).thenReturn(account);
+        when(user.isCorrectPin(MOCKED_USER_PIN)).thenReturn(true);
     }
 
     //> or test balance
     @Test
     public void testDepositToAccount() {
 
-        when(userManager.getAccountFromUser(MOCKED_USER_ID, MOCKED_ACCOUNT_NUMBER)).thenReturn(account);
+        setBehaviour();
         when(account.checkBalance()).thenReturn(AMOUNT);
         atmSystem.depositToAccount(MOCKED_USER_ID, MOCKED_USER_PIN, MOCKED_ACCOUNT_NUMBER, AMOUNT);
         assertEquals(AMOUNT, atmSystem.checkBalance(MOCKED_USER_ID, MOCKED_USER_PIN, MOCKED_ACCOUNT_NUMBER));
@@ -44,7 +55,7 @@ public class AtmSystemTest {
     public void testWithdrawFromAccount() {
 
         final int EXPECTED_AMOUNT = 120;
-        when(userManager.getAccountFromUser(MOCKED_USER_ID, MOCKED_ACCOUNT_NUMBER)).thenReturn(account);
+        setBehaviour();
         when(account.checkBalance()).thenReturn(EXPECTED_AMOUNT);
         atmSystem.withdrawFromAccount(MOCKED_USER_ID, MOCKED_USER_PIN, MOCKED_ACCOUNT_NUMBER, AMOUNT);
         assertEquals(EXPECTED_AMOUNT, atmSystem.checkBalance(MOCKED_USER_ID, MOCKED_USER_PIN, MOCKED_ACCOUNT_NUMBER));
@@ -53,7 +64,7 @@ public class AtmSystemTest {
     @Test
     public void testCheckBalance() {
 
-        when(userManager.getAccountFromUser(MOCKED_USER_ID, MOCKED_ACCOUNT_NUMBER)).thenReturn(account);
+        setBehaviour();
         when(account.checkBalance()).thenReturn(AMOUNT);
         assertEquals(AMOUNT, atmSystem.checkBalance(MOCKED_USER_ID, MOCKED_USER_PIN, MOCKED_ACCOUNT_NUMBER));
     }

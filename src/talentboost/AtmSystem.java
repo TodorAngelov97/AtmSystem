@@ -13,19 +13,25 @@ public class AtmSystem {
 
     public void depositToAccount(int userId, int pin, int accountNumber, int amount) {
 
-        Account account = userManager.getAccountFromUser(userId, accountNumber);
+        User user = userManager.getUser(userId);
+        validateUsersPin(user, pin);
+        Account account = userManager.getAccount(user, accountNumber);
         account.deposit(amount);
     }
 
     public void withdrawFromAccount(int userId, int pin, int accountNumber, int amount) {
 
-        Account account = userManager.getAccountFromUser(userId, accountNumber);
+        User user = userManager.getUser(userId);
+        validateUsersPin(user, pin);
+        Account account = userManager.getAccount(user, accountNumber);
         account.withdraw(amount);
     }
 
     public int checkBalance(int userId, int pin, int accountNumber) {
 
-        Account account = userManager.getAccountFromUser(userId, accountNumber);
+        User user = userManager.getUser(userId);
+        validateUsersPin(user, pin);
+        Account account = userManager.getAccount(user, accountNumber);
         return account.checkBalance();
     }
 
@@ -38,16 +44,15 @@ public class AtmSystem {
     private User getUser(int userId, int pin) {
 
         User user = userManager.getUser(userId);
-        isCorrectUsersPin(user, pin);
+        validateUsersPin(user, pin);
         return user;
     }
 
-    private boolean isCorrectUsersPin(User user, int pin) {
+    private void validateUsersPin(User user, int pin) {
 
         if (!user.isCorrectPin(pin)) {
             throw new InvalidPinException("Invalid pin of the user");
         }
-        return true;
     }
 }
 

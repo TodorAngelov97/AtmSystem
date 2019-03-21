@@ -78,9 +78,10 @@ public class UserManager {
     }
 
 
-    public void joinToYourAccount(int userId, int pin, int joinedUserId, int accountNumber) {
+    public void joinToYourAccount(int userId, int joinedUserId, int accountNumber) {
 
-        Account accountToJoin = getAccountFromUser(userId, accountNumber);
+        User user = getUser(userId);
+        Account accountToJoin = getAccount(user, accountNumber);
         User userToJoin = getUser(joinedUserId);
         userToJoin.addAccount(accountToJoin);
     }
@@ -90,9 +91,8 @@ public class UserManager {
     }
 
 
-    public Account getAccountFromUser(int userId, int accountNumber) {
+    public Account getAccount(User user, int accountNumber) {
 
-        User user = getUser(userId);
         Account account = user.getAccount(accountNumber);
         return account;
     }
