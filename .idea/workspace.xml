@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/talentboost/User.java" line="19" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7e5adaa7-5aff-4c58-98d1-8ad2ef3f9b58" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/talentboost/AtmSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/talentboost/UserManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/talentboost/AtmSystemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/talentboost/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/AtmSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/AtmSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AtmSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AtmSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/AtmSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/OverdraftAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/RestrictionWithdrawAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/com/exception/AccountAlreadyExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/com/exception/AmountNotInRestrictionException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/com/exception/InvalidAccountNumberException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/com/exception/InvalidUserIDException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AtmSystem/com/com/exception/UserAlreadyExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/AccountInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/AccountInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/AtmSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/AtmSystemInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/AtmSystemInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/OverdraftAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/OverdraftAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/RestrictionWithdrawAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/RestrictionWithdrawAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/com/exception/AccountAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/exception/AccountAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/com/exception/AmountNotInRestrictionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/exception/AmountNotInRestrictionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/com/exception/InvalidAccountNumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/exception/InvalidAccountNumberException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/com/exception/InvalidPinException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/exception/InvalidPinException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/com/exception/InvalidUserIDException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/exception/InvalidUserIDException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/com/exception/UserAlreadyExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/talentboost/exception/UserAlreadyExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/talentboost/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/OverdraftAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/talentboost/OverdraftAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/RestrictionWithdrawAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/talentboost/RestrictionWithdrawAccountTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,122 +47,134 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AtmSystem$AccountTest.ic" NAME="AccountTest Coverage Results" MODIFIED="1552900302925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/AtmSystem$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1552988188755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AtmSystem$AccountTest.ic" NAME="AccountTest Coverage Results" MODIFIED="1552987765997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AtmSystem$RestrictionWithdrawAccountTest_testWithdrawWithCorrectData.ic" NAME="RestrictionWithdrawAccountTest.testWithdrawWithCorrectData Coverage Results" MODIFIED="1552987946047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AtmSystem$OverdraftAccountTest_testWithdrawWithCorrectData.ic" NAME="OverdraftAccountTest.testWithdrawWithCorrectData Coverage Results" MODIFIED="1552987844499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AtmSystem$RestrictionWithdrawAccountTest.ic" NAME="RestrictionWithdrawAccountTest Coverage Results" MODIFIED="1552988011882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="209" />
+    <option name="myElementSize" value="114" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/AtmSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="38" column="4" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4638#4639#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/AccountTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/AtmSystemInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/OverdraftAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/RestrictionWithdrawAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/com/exception/InvalidUserIDException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/AccountInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/UserInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.45838925">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/talentboost/AtmSystem.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#236#237#0" expanded="true" />
+                    <element signature="e#254#255#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/talentboost/UserTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="184">
+                  <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#1127#1128#0" expanded="true" />
+                    <element signature="e#1174#1175#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/talentboost/User.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1214#1215#0" expanded="true" />
+                    <element signature="e#1272#1273#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/talentboost/UserManager.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1598">
+                  <caret line="96" column="23" lean-forward="true" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/talentboost/Account.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="220">
+                  <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+                  <folding>
+                    <element signature="e#817#818#0" expanded="true" />
+                    <element signature="e#860#861#0" expanded="true" />
+                    <element signature="e#893#894#0" expanded="true" />
+                    <element signature="e#923#924#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/talentboost/User.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="137">
+                  <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/talentboost/AtmSystemTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="492">
+                  <caret line="68" column="69" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
+                  <folding>
+                    <element signature="e#705#706#0" expanded="true" />
+                    <element signature="e#761#762#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -137,8 +183,13 @@
     <findStrings>
       <find>isUserEx</find>
       <find>null</find>
-      <find>getUser</find>
       <find>Account</find>
+      <find>addAccount</find>
+      <find>getUser</find>
+      <find>isAccountExists</find>
+      <find>isCorrr</find>
+      <find>val</find>
+      <find>isc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,14 +216,22 @@
         <option value="$PROJECT_DIR$/test/com/RestrictionWithdrawAccountTest.java" />
         <option value="$PROJECT_DIR$/src/com/OverdraftAccount.java" />
         <option value="$PROJECT_DIR$/src/com/RestrictionWithdrawAccount.java" />
-        <option value="$PROJECT_DIR$/src/com/AccountInterface.java" />
-        <option value="$PROJECT_DIR$/src/com/Account.java" />
         <option value="$PROJECT_DIR$/src/com/OverdraftAccountInterface.java" />
-        <option value="$PROJECT_DIR$/src/com/User.java" />
         <option value="$PROJECT_DIR$/src/com/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/com/AtmSystemInterface.java" />
         <option value="$PROJECT_DIR$/src/com/com/exception/InvalidPinException.java" />
+        <option value="$PROJECT_DIR$/src/com/AccountInterface.java" />
+        <option value="$PROJECT_DIR$/test/com/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/com/User.java" />
+        <option value="$PROJECT_DIR$/test/com/AtmSystemTest.java" />
+        <option value="$PROJECT_DIR$/src/com/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/UserManager.java" />
         <option value="$PROJECT_DIR$/src/com/AtmSystem.java" />
+        <option value="$PROJECT_DIR$/src/talentboost/Account.java" />
+        <option value="$PROJECT_DIR$/src/talentboost/User.java" />
+        <option value="$PROJECT_DIR$/test/talentboost/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/talentboost/AtmSystem.java" />
+        <option value="$PROJECT_DIR$/test/talentboost/AtmSystemTest.java" />
       </list>
     </option>
   </component>
@@ -183,10 +242,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="176" />
-    <option name="y" value="5" />
+    <option name="x" value="960" />
     <option name="width" value="960" />
-    <option name="height" value="1035" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,7 +253,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,36 +263,29 @@
             <path>
               <item name="AtmSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="AtmSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AtmSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AtmSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AtmSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="AtmSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtmSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtmSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
+              <item name="talentboost" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AtmSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="AtmSystem" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AtmSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AtmSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,14 +293,15 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552983019288" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553181269326" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -258,6 +309,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\InteliJProjects\AtmSystem\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -272,8 +326,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest">
-    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AtmSystemTest.testChangePin">
+    <configuration name="UserManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.UserManager" />
       <module name="AtmSystem" />
       <extension name="coverage">
         <pattern>
@@ -281,72 +336,69 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.AccountTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.testWithdrawWithCorrectData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AtmSystemTest.testChangePin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AtmSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="talentboost.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.AccountTest" />
-      <option name="METHOD_NAME" value="testWithdrawWithCorrectData" />
+      <option name="PACKAGE_NAME" value="talentboost" />
+      <option name="MAIN_CLASS_NAME" value="talentboost.AtmSystemTest" />
+      <option name="METHOD_NAME" value="testChangePin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OverdraftAccountTest.testWithdrawToThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AtmSystemTest.testCheckBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AtmSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="talentboost.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.OverdraftAccountTest" />
-      <option name="METHOD_NAME" value="testWithdrawToThrowException" />
+      <option name="PACKAGE_NAME" value="talentboost" />
+      <option name="MAIN_CLASS_NAME" value="talentboost.AtmSystemTest" />
+      <option name="METHOD_NAME" value="testCheckBalance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestrictionWithdrawAccountTest.testWithdrawToThrowExcetpion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AtmSystemTest.testDepositToAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AtmSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="talentboost.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.RestrictionWithdrawAccountTest" />
-      <option name="METHOD_NAME" value="testWithdrawToThrowExcetpion" />
+      <option name="PACKAGE_NAME" value="talentboost" />
+      <option name="MAIN_CLASS_NAME" value="talentboost.AtmSystemTest" />
+      <option name="METHOD_NAME" value="testDepositToAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RestrictionWithdrawAccountTest.testWithdrawWithCorrectData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AtmSystemTest.testWithdrawFromAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AtmSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="talentboost.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.RestrictionWithdrawAccountTest" />
-      <option name="METHOD_NAME" value="testWithdrawWithCorrectData" />
+      <option name="PACKAGE_NAME" value="talentboost" />
+      <option name="MAIN_CLASS_NAME" value="talentboost.AtmSystemTest" />
+      <option name="METHOD_NAME" value="testWithdrawFromAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -354,11 +406,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.testWithdrawWithCorrectData" />
-        <item itemvalue="JUnit.RestrictionWithdrawAccountTest.testWithdrawWithCorrectData" />
-        <item itemvalue="JUnit.RestrictionWithdrawAccountTest.testWithdrawToThrowExcetpion" />
-        <item itemvalue="JUnit.OverdraftAccountTest.testWithdrawToThrowException" />
+        <item itemvalue="JUnit.AtmSystemTest.testChangePin" />
+        <item itemvalue="JUnit.AtmSystemTest.testCheckBalance" />
+        <item itemvalue="JUnit.AtmSystemTest.testWithdrawFromAccount" />
+        <item itemvalue="JUnit.AtmSystemTest.testDepositToAccount" />
+        <item itemvalue="Application.UserManager" />
       </list>
     </recent_temporary>
   </component>
@@ -376,35 +428,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OverdraftAccountTest_testWithdrawToThrowException - 2019.03.18 at 11h 25m 52s.xml">
-      <configuration name="OverdraftAccountTest.testWithdrawToThrowException" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 22m 11s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OverdraftAccountTest_testWithdrawWithCorrectData - 2019.03.18 at 11h 27m 00s.xml">
-      <configuration name="OverdraftAccountTest.testWithdrawWithCorrectData" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 23m 37s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OverdraftAccountTest_testWithdrawToThrowException - 2019.03.18 at 11h 27m 07s.xml">
-      <configuration name="OverdraftAccountTest.testWithdrawToThrowException" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 28m 47s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OverdraftAccountTest_testWithdrawWithCorrectData - 2019.03.18 at 11h 27m 13s.xml">
-      <configuration name="OverdraftAccountTest.testWithdrawWithCorrectData" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 32m 10s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OverdraftAccountTest_testWithdrawWithCorrectData - 2019.03.18 at 11h 28m 22s.xml">
-      <configuration name="OverdraftAccountTest.testWithdrawWithCorrectData" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 35m 41s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OverdraftAccountTest_testWithdrawToThrowException - 2019.03.18 at 11h 28m 28s.xml">
-      <configuration name="OverdraftAccountTest.testWithdrawToThrowException" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 36m 00s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RestrictionWithdrawAccountTest_testWithdrawToThrowExcetpion - 2019.03.18 at 11h 35m 12s.xml">
-      <configuration name="RestrictionWithdrawAccountTest.testWithdrawToThrowExcetpion" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 36m 21s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RestrictionWithdrawAccountTest_testWithdrawWithCorrectData - 2019.03.18 at 11h 35m 21s.xml">
-      <configuration name="RestrictionWithdrawAccountTest.testWithdrawWithCorrectData" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testDepositToAccount - 2019.03.21 at 16h 36m 43s.xml">
+      <configuration name="AtmSystemTest.testDepositToAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountTest_testWithdrawWithCorrectData - 2019.03.19 at 10h 07m 18s.xml">
-      <configuration name="AccountTest.testWithdrawWithCorrectData" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testWithdrawFromAccount - 2019.03.21 at 16h 49m 37s.xml">
+      <configuration name="AtmSystemTest.testWithdrawFromAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountTest - 2019.03.19 at 10h 07m 37s.xml">
-      <configuration name="AccountTest" configurationId="JUnit" />
+    <history-entry file="AtmSystemTest_testCheckBalance - 2019.03.21 at 17h 01m 52s.xml">
+      <configuration name="AtmSystemTest.testCheckBalance" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -420,7 +472,7 @@
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1932886" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -429,12 +481,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3361582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38276836" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42372882" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32909605" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28672317" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32909605" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32909605" />
@@ -445,11 +497,11 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.3295302" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3295302" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.35369128" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.3295302" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31275168" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -458,23 +510,24 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3361582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38276836" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42372882" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32909605" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.28672317" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32909605" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32909605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.3295302" />
+      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.35369128" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.3295302" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -518,6 +571,48 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/talentboost/AccountTest.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/talentboost/OverdraftAccount.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/talentboost/User.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/talentboost/UserManager.java</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/talentboost/AtmSystem.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/talentboost/UserManager.java</url>
+          <line>99</line>
+          <properties class="talentboost.UserManager" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="atm" />
@@ -529,14 +624,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/com/exception/InvalidAccountNumberException.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/exception/InvalidAccountNumberException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/com/exception/AccountAlreadyExistsException.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/exception/AccountAlreadyExistsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
@@ -551,7 +646,7 @@
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/com/exception/AmountNotInRestrictionException.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/exception/AmountNotInRestrictionException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
@@ -562,31 +657,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/com/exception/UserAlreadyExistsException.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/exception/UserAlreadyExistsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/RestrictionWithdrawAccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/OverdraftAccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/com/exception/Account.java" />
     <entry file="file://$PROJECT_DIR$/src/com/RestrictionWithdrawAccountInterface.java" />
     <entry file="file://$PROJECT_DIR$/src/com/OverdraftAccountInterface.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/com/exception/InvalidPinException.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/exception/InvalidPinException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
@@ -597,82 +678,249 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/AtmSystemInterface.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/UserInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/OverdraftAccount.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/AccountInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/RestrictionWithdrawAccount.java">
+    <entry file="file://$PROJECT_DIR$/src/talentboost/AtmSystemInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/talentboost/OverdraftAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/talentboost/OverdraftAccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/talentboost/RestrictionWithdrawAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="39" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/com/exception/InvalidUserIDException.java">
+    <entry file="file://$PROJECT_DIR$/test/talentboost/RestrictionWithdrawAccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="73" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/talentboost/AccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk10/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/talentboost/exception/InvalidUserIDException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Account.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mockito-core-2.23.0.jar!/org/mockito/junit/MockitoJUnitRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#1075#1076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mockito-core-2.23.0.jar!/org/mockito/internal/runners/StrictRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mockito-core-2.23.0.jar!/org/mockito/internal/runners/DefaultInternalRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#3288#3289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/ExpectException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk10/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="1048" selection-start-line="1048" selection-end-line="1048" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk10/lib/src.zip!/java.base/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
+          <folding>
+            <element signature="e#4168#4169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mockito-core-2.23.0.jar!/org/mockito/internal/handler/InvocationNotifierHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mockito-core-2.23.0.jar!/org/mockito/internal/invocation/RealMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#1222#1380#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mockito-core-2.23.0.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/talentboost/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding>
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="203" selection-start-line="203" selection-end-line="203" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/talentboost/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+          <folding>
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/talentboost/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="96" column="23" lean-forward="true" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/talentboost/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/talentboost/AtmSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/AccountInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/AccountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/User.java">
+    <entry file="file://$PROJECT_DIR$/test/talentboost/AtmSystemTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="492">
+          <caret line="68" column="69" selection-start-line="68" selection-start-column="69" selection-end-line="68" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/AtmSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="38" column="4" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4638#4639#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -734,7 +982,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
