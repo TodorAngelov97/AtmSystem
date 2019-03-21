@@ -11,6 +11,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class AtmSystemTest {
+
     private static final int MOCKED_USER_ID = 1;
     private static final int MOCKED_USER_PIN = 1234;
     private static final int MOCKED_ACCOUNT_NUMBER = 5;

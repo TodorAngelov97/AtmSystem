@@ -21,14 +21,14 @@ public class Account implements AccountInterface {
 
 
     public int withdraw(int amount) {
-        if (!isBalancePositiveAfterWithdraw(amount)) {
+        if (!isBalanceEnoughForWithdraw(amount)) {
             throw new IllegalArgumentException("Illegal argument, balance should be positive after withdraw operation");
         }
         balance -= amount;
         return balance;
     }
 
-    protected boolean isBalancePositiveAfterWithdraw(int amount) {
+    protected boolean isBalanceEnoughForWithdraw(int amount) {
         return balance - amount > 0;
     }
 

@@ -11,16 +11,9 @@ public class OverdraftAccount extends Account {
         this.overdraft = overdraft;
     }
 
-    @Override
-    public int withdraw(int amount) {
-        if (!isBalancePositiveAfterWithdraw(amount)) {
-            throw new IllegalArgumentException("Illegal argument, balance should be greater than overdraft after withdraw operation");
-        }
-        balance -= amount;
-        return balance;
-    }
 
-    protected boolean isBalancePositiveAfterWithdraw(int amount) {
+    @Override
+    protected boolean isBalanceEnoughForWithdraw(int amount) {
         return balance - amount > MINUS * overdraft;
     }
 

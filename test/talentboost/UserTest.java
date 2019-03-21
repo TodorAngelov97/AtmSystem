@@ -18,8 +18,6 @@ public class UserTest {
     private static final int ACCOUNT_NUMBER = 1;
     private User user;
 
-    @Mock
-    private Map<Integer, Account> accounts;
 
     @Before
     public void setUp() {
@@ -29,12 +27,12 @@ public class UserTest {
         user = new User(USER_ID, PIN);
     }
 
+    //? add and get same test
+    //addAccount point ???
     @Test
     public void testGetAccountWithCorrectAccountNumber() {
 
-        Account account = new Account(ACCOUNT_NUMBER);
-        when(accounts.containsKey(ACCOUNT_NUMBER)).thenReturn(true);
-        when(accounts.get(ACCOUNT_NUMBER)).thenReturn(account);
+        Account account = addAccountToTestUser();
         assertEquals(account, user.getAccount(ACCOUNT_NUMBER));
     }
 
@@ -48,10 +46,7 @@ public class UserTest {
     @Test
     public void testAddAccount() {
 
-        Account account = new Account(ACCOUNT_NUMBER);
-        user.addAccount(account);
-        when(accounts.containsKey(ACCOUNT_NUMBER)).thenReturn(true);
-        when(accounts.get(ACCOUNT_NUMBER)).thenReturn(account);
+        Account account = addAccountToTestUser();
         assertEquals(account, user.getAccount(ACCOUNT_NUMBER));
     }
 
@@ -69,12 +64,20 @@ public class UserTest {
     @Test
     public void isAccountExistsWhenAccountExists() {
 
-        when(accounts.containsKey(ACCOUNT_NUMBER)).thenReturn(true);
+        addAccountToTestUser();
         assertTrue(user.isAccountExists(ACCOUNT_NUMBER));
     }
+
 
     @Test
     public void isAccountExistsWhenAccountDoNotExists() {
         assertFalse(user.isAccountExists(ACCOUNT_NUMBER));
+    }
+
+    private Account addAccountToTestUser() {
+
+        Account account = new Account(ACCOUNT_NUMBER);
+        user.addAccount(account);
+        return account;
     }
 }

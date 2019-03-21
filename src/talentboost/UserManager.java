@@ -22,7 +22,7 @@ public class UserManager {
     public int createAccount(int userId, int pin) {
 
         ++numberOfAccounts;
-        isAccountExists(userId, pin, numberOfAccounts);
+        validateAccountExists(userId, pin, numberOfAccounts);
         User user = getUser(userId);
         Account newAccount = new Account(numberOfAccounts);
         user.addAccount(newAccount);
@@ -32,7 +32,7 @@ public class UserManager {
 
     public int createOverdraftAccount(int userId, int pin, int overdraft) {
 
-        isAccountExists(userId, pin, numberOfAccounts);
+        validateAccountExists(userId, pin, numberOfAccounts);
         User user = getUser(userId);
         Account newAccount = new OverdraftAccount(numberOfAccounts, overdraft);
         user.addAccount(newAccount);
@@ -43,7 +43,7 @@ public class UserManager {
     public int createRestrictionWithdrawAccount(int userId, int pin, int restriction) {
 
         ++numberOfAccounts;
-        isAccountExists(userId, pin, numberOfAccounts);
+        validateAccountExists(userId, pin, numberOfAccounts);
         User user = users.get(userId);
         Account newAccount = new RestrictionWithdrawAccount(numberOfAccounts, restriction);
         user.addAccount(newAccount);
@@ -51,7 +51,7 @@ public class UserManager {
         return numberOfAccounts;
     }
 
-    private void isAccountExists(int userId, int pin, int accountNumber) {
+    private void validateAccountExists(int userId, int pin, int accountNumber) {
 
         User user = getUser(userId);
         if (user.isAccountExists(accountNumber)) {
@@ -101,16 +101,16 @@ public class UserManager {
         UserManager userManager = new UserManager();
         AtmSystem atmSystem = new AtmSystem(userManager);
         userManager.createUser(1, 1);
-        int accountNumber = userManager.createRestrictionWithdrawAccount(1, 1, 100);
-        atmSystem.depositToAccount(1, 1, accountNumber, 100);
+        int accountNumber = userManager.createOverdraftAccount(1, 1, 100);
+        //atmSystem.depositToAccount(1, 1, accountNumber, 100);
         atmSystem.withdrawFromAccount(1, 1, accountNumber, 80);
-        atmSystem.checkBalance(1, 1, accountNumber);
+        System.out.println(atmSystem.checkBalance(1, 1, accountNumber));
 
         AtmSystem atmSystemPro = new AtmSystem(userManager);
         atmSystemPro.depositToAccount(1, 1, accountNumber, 200);
         atmSystem.withdrawFromAccount(1, 1, accountNumber, 31);
 
-        atmSystemPro.checkBalance(1, 1, accountNumber);
+        System.out.println(atmSystemPro.checkBalance(1, 1, accountNumber));
 
     }
 }

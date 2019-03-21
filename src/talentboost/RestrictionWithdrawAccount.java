@@ -13,17 +13,8 @@ public class RestrictionWithdrawAccount extends Account {
     }
 
 
-    //new exception
-    public int withdraw(int amount) {
-        if (!isBalancePositiveAfterWithdraw(amount)) {
-            throw new AmountNotInRestrictionException("Amount not in restriction");
-        }
-        super.withdraw(amount);
-        return balance;
-    }
-
     @Override
-    protected boolean isBalancePositiveAfterWithdraw(int amount) {
+    protected boolean isBalanceEnoughForWithdraw(int amount) {
         return amount <= limitForWithdraw;
     }
 
