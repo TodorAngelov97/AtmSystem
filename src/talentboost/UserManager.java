@@ -19,10 +19,10 @@ public class UserManager {
         numberOfAccounts = INITIAL_ACCOUNT_NUMBER;
     }
 
-    public int createAccount(int userId, int pin) {
+    public int createAccount(int userId) {
 
         ++numberOfAccounts;
-        validateAccountExists(userId, pin, numberOfAccounts);
+        validateAccountExists(userId, numberOfAccounts);
         User user = getUser(userId);
         Account newAccount = new Account(numberOfAccounts);
         user.addAccount(newAccount);
@@ -30,9 +30,9 @@ public class UserManager {
         return numberOfAccounts;
     }
 
-    public int createOverdraftAccount(int userId, int pin, int overdraft) {
+    public int createOverdraftAccount(int userId, int overdraft) {
 
-        validateAccountExists(userId, pin, numberOfAccounts);
+        validateAccountExists(userId, numberOfAccounts);
         User user = getUser(userId);
         Account newAccount = new OverdraftAccount(numberOfAccounts, overdraft);
         user.addAccount(newAccount);
@@ -40,10 +40,10 @@ public class UserManager {
         return numberOfAccounts;
     }
 
-    public int createRestrictionWithdrawAccount(int userId, int pin, int restriction) {
+    public int createRestrictionWithdrawAccount(int userId, int restriction) {
 
         ++numberOfAccounts;
-        validateAccountExists(userId, pin, numberOfAccounts);
+        validateAccountExists(userId, numberOfAccounts);
         User user = users.get(userId);
         Account newAccount = new RestrictionWithdrawAccount(numberOfAccounts, restriction);
         user.addAccount(newAccount);
@@ -51,7 +51,7 @@ public class UserManager {
         return numberOfAccounts;
     }
 
-    private void validateAccountExists(int userId, int pin, int accountNumber) {
+    private void validateAccountExists(int userId, int accountNumber) {
 
         User user = getUser(userId);
         if (user.isAccountExists(accountNumber)) {
@@ -68,6 +68,7 @@ public class UserManager {
 
 
     public void createUser(int userId, int pin) {
+
 
         if (isUserExists(userId)) {
             throw new UserAlreadyExistsException("User already exist");
@@ -86,7 +87,7 @@ public class UserManager {
         userToJoin.addAccount(accountToJoin);
     }
 
-    boolean isUserExists(int userID) {
+    private boolean isUserExists(int userID) {
         return users.containsKey(userID);
     }
 
@@ -101,9 +102,9 @@ public class UserManager {
         UserManager userManager = new UserManager();
         AtmSystem atmSystem = new AtmSystem(userManager);
         userManager.createUser(1, 1);
-        int accountNumber = userManager.createOverdraftAccount(1, 1, 100);
+        int accountNumber = userManager.createOverdraftAccount(1 , 100);
         //atmSystem.depositToAccount(1, 1, accountNumber, 100);
-        atmSystem.withdrawFromAccount(1, 1, accountNumber, 80);
+        //atmSystem.withdrawFromAccount(1,  accountNumber, 80);
         System.out.println(atmSystem.checkBalance(1, 1, accountNumber));
 
         AtmSystem atmSystemPro = new AtmSystem(userManager);
