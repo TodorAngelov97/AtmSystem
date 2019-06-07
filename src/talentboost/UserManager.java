@@ -103,8 +103,6 @@ public class UserManager {
         AtmSystem atmSystem = new AtmSystem(userManager);
         userManager.createUser(1, 1);
         int accountNumber = userManager.createOverdraftAccount(1, 100);
-        //atmSystem.depositToAccount(1, 1, accountNumber, 100);
-        //atmSystem.withdrawFromAccount(1,  accountNumber, 80);
         System.out.println(atmSystem.checkBalance(1, 1, accountNumber));
 
         AtmSystem atmSystemPro = new AtmSystem(userManager);
