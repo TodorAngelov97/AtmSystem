@@ -12,7 +12,6 @@ public class RestrictionWithdrawAccount extends Account {
         this.limitForWithdraw = limitForWithdraw;
     }
 
-
     @Override
     protected boolean isBalanceEnoughForWithdraw(int amount) {
         return amount <= limitForWithdraw;

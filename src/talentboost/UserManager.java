@@ -4,6 +4,7 @@ import talentboost.exception.AccountAlreadyExistsException;
 import talentboost.exception.InvalidUserIDException;
 import talentboost.exception.UserAlreadyExistsException;
 
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -78,7 +79,6 @@ public class UserManager {
         System.out.println("Successfully created user");
     }
 
-
     public void joinToYourAccount(int userId, int joinedUserId, int accountNumber) {
 
         User user = getUser(userId);
@@ -102,7 +102,7 @@ public class UserManager {
         UserManager userManager = new UserManager();
         AtmSystem atmSystem = new AtmSystem(userManager);
         userManager.createUser(1, 1);
-        int accountNumber = userManager.createOverdraftAccount(1 , 100);
+        int accountNumber = userManager.createOverdraftAccount(1, 100);
         //atmSystem.depositToAccount(1, 1, accountNumber, 100);
         //atmSystem.withdrawFromAccount(1,  accountNumber, 80);
         System.out.println(atmSystem.checkBalance(1, 1, accountNumber));
